@@ -58,10 +58,20 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   padding: 2em;
   font-size: 1.25em;
+  color: #fff;
   height: 100%;
 }
 
-.header {
+header {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.introduction {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -75,20 +85,36 @@ body {
   display: flex;
   justify-content: space-between;
   font-weight: 700;
+  flex-flow: row wrap;
 }
 
 .div-1, .div-2, .div-3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 33.33%;
+  width: 25%;
   color: #fff;
   line-height: 1.5em;
-  font-size: 1.6em;
+  font-size: 1em;
   background-color: none;
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
   height: 300px;
+  padding: 0em 2em;
+  flex-grow: 1;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-top: 1px solid #fff;
+    margin-top: 2em;
+    padding-top: 1em;
+    font-weight: 400;
+    font-size: .75em;
 }
 
 .hidden {
@@ -128,6 +154,35 @@ body {
 
 .clearfix:after {
     clear: both;
+}
+
+@media screen and (max-width: 1200px) {
+    .introduction {
+        border-bottom: none;
+    }
+
+    .div-1, .div-2, .div-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        color: #fff;
+        line-height: 1.5em;
+        font-size: 1em;
+        background-color: none;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        border-left: none;
+        border-right: none;
+        height: 300px;
+        padding: 0em 2em;
+      }
+
+    footer {
+    border-top: none;
+    margin: 0em 1em;
+}
 }
 
 @media print,
